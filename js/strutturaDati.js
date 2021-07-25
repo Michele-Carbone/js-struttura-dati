@@ -85,12 +85,12 @@ if (cardMagic.abilities.length > 0) {
 
 let cardTemplate = `
 <ul class = "card">
-    <li>Id: ${cardMagic.id}</li>
-    <li>Name: ${cardMagic.name}</li>
-    <li>Costo di lancio: ${cardMagic.launchCost.join(', ')}</li>
-    <li>Costo di Mana convertito: ${cardMagic.convertedManaCost}</li>
-    <li>Tipo Carta: ${cardMagic.cardType} ${'- ' + cardMagic.subType}</li>
-    <li>Espansione:
+    <li><strong>Id:</strong> ${cardMagic.id}</li>
+    <li><strong>Name:</strong> ${cardMagic.name}</li>
+    <li><strong>Costo di lancio:</strong> ${cardMagic.launchCost.join(', ')}</li>
+    <li><strong>Costo di Mana convertito:</strong> ${cardMagic.convertedManaCost}</li>
+    <li><strong>Tipo Carta:</strong> ${cardMagic.cardType} ${'- ' + cardMagic.subType}</li>
+    <li><strong>Espansione:</strong>
     <ul>
         <li>Rispampa: ${cardMagic.expansion.reprintingId}</li>
         <li>Nome: ${cardMagic.expansion.name}</li>
@@ -99,18 +99,18 @@ let cardTemplate = `
         <li>Numero Collezione: ${cardMagic.expansion.collectionNumber} / ${cardMagic.expansion.totalCard}</li>
     </ul>
     </li>
-    <li>Colore del Testo: ${cardMagic.flavorText.informationCard} - ${cardMagic.flavorText.author}</li>
+    <li><strong>Colore del Testo:</strong> ${cardMagic.flavorText.informationCard} - ${cardMagic.flavorText.author}</li>
     <li><strong>Abilita':</strong>${abilitiesContent}</li>
-    <li>Costituzione: ${cardMagic.constitution}</li>
-    <li>Forza: ${cardMagic.strength}</li>
-    <li>Colore Bordo: ${cardMagic.borderColor}</li>
-    <li>Illustrazione: 
+    <li><strong>Costituzione:</strong> ${cardMagic.constitution}</li>
+    <li><strong>Forza:</strong> ${cardMagic.strength}</li>
+    <li><strong>Colore Bordo:</strong> ${cardMagic.borderColor}</li>
+    <li><strong>Illustrazione:</strong> 
     <ul>
         <li>Autore: ${cardMagic.illustration.author.name} (id: ${cardMagic.illustration.author.id})</li>
         <li>Link illustrazione: ${cardMagic.illustration.source}</li>
     </ul>
     </li>
-    <li>Colore di sfondo: 
+    <li><strong>Colore di sfondo:</strong> 
     <ul>
         <li>Colore: ${cardMagic.background.color}</li>
         <li>Link illustrazione: ${cardMagic.background.source}</li>
