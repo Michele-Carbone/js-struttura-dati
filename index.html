@@ -12,6 +12,28 @@
 <body>
     <div class="container">
 
+        <h1>BENVENUTO NEL MONDO DI MAGIC</h1>
+        <h2>Cerca la tua carta VINCENTE</h2>
+
+        <select id="filter">
+            <option selected value="all">Tutte</option>
+            <option value="id">Id</option>
+            <option value="name">Nome</option>
+            <option value="launchCost">Costo di lancio</option>
+            <!--E' un numero va gestito in modo diverso-->
+            <option value="convertedManaCost">Costo del Mana convertito</option>
+            <option value="cardType">Tipo carta</option>
+            <option value="subType">Subtipo carta</option>
+            <option value="collectionNumber">Numero della collezione</option>
+            <!--E' un numero va gestito in modo diverso-->
+            <option value="constitution">Costituzione</option>
+            <option value="strength">Forza</option>
+        </select>
+        <button id="button">Filter</button>
+        <input type="text" id="search" placeholder="Scrivi la carta che cerchi.." class="hidden">
+
+        <hr>
+        <h2>Qui potrai notare alcune card tra le piu' forti</h2>
         <section id="cards">
 
         </section>

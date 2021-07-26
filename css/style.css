@@ -19,9 +19,20 @@ ul.card{
     border: 1px solid black;
 }
 
+h1{
+    text-align: center;
+    color: darkblue;
+    border: 1px solid darkblue;
+    background-color: rgb(0, 139, 12);
+    border-radius: 20px;
+}
 
+h2{
+    margin: 20px;
+    color: rgb(255, 116, 2);
+}
 
-
-
-
+.hidden{
+    display: none;
+}
 

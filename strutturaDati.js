@@ -24,8 +24,8 @@ Filtrare anche altre proprietà i cui valori sono più complessi, se ne avete (o
 
 
 */
-//deck Magic 
-const fullDeck = [
+
+const deck = [
     {
         id: 1, //id dell Oggetto per il database
         name: 'Grizzly Bears',  // nome della carta
@@ -225,72 +225,26 @@ const createCardTemplate = (cardMagic) => {
 
 
 
-const renderDeck = (deck, targetElement) => {
+//STAMPA IN PAGINA
+const cardSection = document.getElementById('cards');
 
-    let deckTemplate = '';
-    for (let i = 0; i < deck.length; i++) {
-        //carta corrente
-        const currentCard = deck[i];
-        deckTemplate += createCardTemplate(currentCard);
-    }
 
-    targetElement.innerHTML = deckTemplate;
+let deckTemplate = '';
+for (let i = 0; i < deck.length; i++) {
+    //carta corrente
+    const currentCard = deck[i];
+    deckTemplate += createCardTemplate(currentCard);
 }
 
 
 
-
-//STAMPA IN PAGINA
-const cardSection = document.getElementById('cards');
-
-renderDeck(fullDeck, cardSection);
 //const cardTemplate = createCardTemplate(cardMagic)
 
 
-// sezione Filtro
-
-const inputField = document.getElementById('search');
-const selectField = document.getElementById('filter');
-const button = document.getElementById('button');
-
-//cambiamento nella selezione della tendina
-selectField.addEventListener('change', () => {
-    const currentValue = selectField.value;
-
-    if (currentValue !== 'all') {//se selezioniamo tutte le opzioni non deve apparire la seconda tendina
-        inputField.classList.remove('hidden');
-    } else { //in caso contrario deve apparire la seconda tendina
-        inputField.classList.add('hidden');
-    }
-});
+cardSection.innerHTML = deckTemplate;
 
 
-button.addEventListener('click', () => {
-    //recuperare il value
-    const inputValue = inputField.value;
-    const selectValue = selectField.value;
 
-    //faccaimo la prima verifica
-    if (selectValue == 'all') {
-        renderDeck(fullDeck, cardSection);
-
-        return;
-    }
-
-    //creare un mazzo con i nostri filtri che ha solo le carte che ci interessano
-    const filterDeck = [];
-    for (let i = 0; i < fullDeck.length; i++) {
-        const currentCard = fullDeck[i];
-
-        //verifichiamo se il valore inserito dall'utente esiste
-        if (currentCard[selectValue] == inputValue) { //non inseriamo l'ugualienza stretta perche' con una stringa non possiamo usare un numero
-            filterDeck.push(currentCard);
-        }
-
-    }
-
-    renderDeck(filterDeck, cardSection);
-})
 
 
 
